@@ -1,16 +1,19 @@
+/* SCSS HEX */
+/* SCSS Gradient */
 .backgroundcanvas {
-  height: 100%;
-  width: 100%;
-  background-color: red;
+  background-color: #2f1b25ff;
+  position: absolute;
+  z-index: -1;
 }
 
 .maincontainer {
+  position: absolute;
+  margin-top: 200px;
   width: 100%;
-  height: 100%;
+  height: 40%;
+  background-color: rgba(78, 56, 34, 0.7);
 }
 
-/* SCSS HEX */
-/* SCSS Gradient */
 * {
   margin: 0;
   padding: 0;
