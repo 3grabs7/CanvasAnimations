@@ -11,18 +11,20 @@
 	flex-direction: column;
 
 	&__head {
+		margin-right: 20px;
 		font-size: 40px;
 		color: white;
-		margin: 0 auto;
+		align-self: flex-end;
 	}
 
 	&__body {
-		margin: 40px auto;
+		margin: 40px 0;
 		height: auto;
 
 		&__boxes {
 			display: flex;
 			width: 100%;
+			justify-content: flex-end;
 
 			&__box {
 				display: flex;
@@ -37,7 +39,6 @@
 				align-items: center;
 				justify-content: center;
 
-				border: 1px $orange-web solid;
 				background-color: $dark-purple;
 				color: white;
 

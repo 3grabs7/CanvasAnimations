@@ -3,12 +3,25 @@ export { Circle, Square };
 
 const colors = ['#ffa200ff', '#4fa91bff', '#a15e49ff', '#4e3822ff'];
 
+let mouse = {
+	x: undefined,
+	y: undefined,
+};
+window.addEventListener('mousemove', function (event) {
+	mouse.x = event.x;
+	mouse.y = event.y;
+});
+
+let maxDia = 200;
+let minDia = 10;
+
 function Circle(x, y, dx, dy, dia) {
 	this.x = x;
 	this.y = y;
 	this.dx = dx;
 	this.dy = dy;
 	this.radius = dia;
+	this.minRadius = dia;
 	this.color = colors[Math.floor(Math.random() * colors.length)];
 
 	this.draw = function () {
@@ -28,19 +41,19 @@ function Circle(x, y, dx, dy, dia) {
 		this.x += this.dx;
 		this.y += this.dy;
 
-		// // mouse interaction
-		// if (
-		// 	mouse.x - this.x < 80 &&
-		// 	mouse.x - this.x > -80 &&
-		// 	mouse.y - this.y < 80 &&
-		// 	mouse.y - this.y > -80
-		// ) {
-		// 	if (this.radius < maxRadius) {
-		// 		this.radius += 1;
-		// 	}
-		// } else if (this.radius > this.minRadius) {
-		// 	this.radius -= 1;
-		// }
+		// mouse interaction
+		if (
+			mouse.x - this.x < 80 &&
+			mouse.x - this.x > -80 &&
+			mouse.y - this.y < 80 &&
+			mouse.y - this.y > -80
+		) {
+			if (this.radius < maxDia) {
+				this.radius += 0.5;
+			}
+		} else if (this.radius > this.minRadius) {
+			this.radius -= 0.5;
+		}
 
 		this.draw();
 	};
@@ -52,6 +65,7 @@ function Square(x, y, dx, dy, dia) {
 	this.dx = dx;
 	this.dy = dy;
 	this.dia = dia;
+	this.minDia = dia;
 	this.color = colors[Math.floor(Math.random() * colors.length)];
 
 	this.draw = function () {
@@ -71,19 +85,19 @@ function Square(x, y, dx, dy, dia) {
 		this.x += this.dx;
 		this.y += this.dy;
 
-		// // mouse interaction
-		// if (
-		// 	mouse.x - this.x < 80 &&
-		// 	mouse.x - this.x > -80 &&
-		// 	mouse.y - this.y < 80 &&
-		// 	mouse.y - this.y > -80
-		// ) {
-		// 	if (this.radius < maxRadius) {
-		// 		this.radius += 1;
-		// 	}
-		// } else if (this.radius > this.minRadius) {
-		// 	this.radius -= 1;
-		// }
+		// mouse interaction
+		if (
+			mouse.x - this.x < 80 &&
+			mouse.x - this.x > -80 &&
+			mouse.y - this.y < 80 &&
+			mouse.y - this.y > -80
+		) {
+			if (this.dia < maxDia) {
+				this.dia += 0.5;
+			}
+		} else if (this.dia > this.minDia) {
+			this.dia -= 0.5;
+		}
 
 		this.draw();
 	};
