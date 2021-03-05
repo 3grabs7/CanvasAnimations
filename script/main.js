@@ -1,14 +1,11 @@
 import { canvas } from './modules/canvasinit.js';
 import { animate } from './modules/animateshapes.js';
+import { animations } from './modules/animations.js';
+
+const boxes = document.querySelectorAll('.maincontainer__body__boxes__box');
 
 document.addEventListener('DOMContentLoaded', (e) => {
 	animate();
-});
 
-// this.animate(
-// 	[{ transform: 'rotate(0deg)' }, { transform: 'rotate(350deg)' }],
-// 	{
-// 		duration: 1,
-// 		iterations: 'Infinity',
-// 	}
-// );
+	Array.from(boxes).forEach((box) => animations.flip(box));
+});
