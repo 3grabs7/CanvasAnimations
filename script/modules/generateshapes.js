@@ -1,5 +1,5 @@
 import { canvas, ctx } from './animateshapes.js';
-export { Circle, Square, Triangle };
+export { Circle, Square };
 
 const colors = ['#ffa200ff', '#4fa91bff', '#a15e49ff', '#4e3822ff'];
 
@@ -87,14 +87,4 @@ function Square(x, y, dx, dy, dia) {
 
 		this.draw();
 	};
-}
-
-function Triangle(x, y, dx, dy, args) {
-	this.x = x;
-	this.y = y;
-	this.dx = dx;
-	this.dy = dy;
-	this.height = args[0];
-	this.width = args[1];
-	this.color = colors[Math.floor(Math.random() * colors.length)];
 }

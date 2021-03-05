@@ -1,4 +1,4 @@
-import { Circle, Square, Triangle } from './generateshapes.js';
+import { Circle, Square } from './generateshapes.js';
 import { canvas } from './canvasinit.js';
 let ctx = canvas.getContext('2d');
 export { canvas, ctx };
@@ -13,7 +13,6 @@ const shapeCollection = {
 const shapes = {
 	circle: Circle,
 	square: Square,
-	//triangle: Triangle,
 };
 
 for (const shape in shapes) {
