@@ -1,5 +1,17 @@
 /* SCSS HEX */
 /* SCSS Gradient */
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: translateX(10deg);
+            transform: translateX(10deg);
+  }
+}
+@keyframes flip {
+  from {
+    -webkit-transform: translateX(10deg);
+            transform: translateX(10deg);
+  }
+}
 .backgroundcanvas {
   background-color: #2f1b25ff;
   position: absolute;
@@ -65,8 +77,6 @@
   border-bottom-right-radius: 20px;
 }
 .maincontainer__body__boxes__box:hover {
-  background-color: #a15e49ff;
-  font-size: 30px;
   cursor: pointer;
 }
 
