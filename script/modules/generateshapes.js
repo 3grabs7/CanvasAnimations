@@ -12,7 +12,7 @@ window.addEventListener('mousemove', function (event) {
 	mouse.y = event.y;
 });
 
-let maxDia = 200;
+let maxDia = 100;
 let minDia = 10;
 
 function Circle(x, y, dx, dy, dia) {

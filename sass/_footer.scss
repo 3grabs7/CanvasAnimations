@@ -1,0 +1,17 @@
+.footer {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 4vh;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: rgba($redwood, 0.4);
+	border-bottom: 5px rgba(58, 38, 38, 0.555) solid;
+	p {
+		color: white;
+		text-align: center;
+		align-self: center;
+	}
+}
