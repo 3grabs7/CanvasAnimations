@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sources":["../sass/_canvas.scss","../sass/main.scss","../sass/_maincontainer.scss","../sass/_variables.scss"],"names":[],"mappings":"AAEA;EACC,YAAA;EACA,WAAA;EACA,qBAAA;ACDD;;ACFA;EACC,WAAA;EACA,YAAA;ADKD;;AEPA,aAAA;AAOA,kBAAA;AFLA;EACC,SAAA;EACA,UAAA;AAUD","file":"main.css"}
